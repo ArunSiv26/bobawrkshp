@@ -180,4 +180,47 @@
     text-decoration: underline;
   }
 
+  /* Flavors Section */
+.flavors-list {
+  list-style: none;
+  padding: 0;
+}
+
+.flavors-list li {
+  background-color: #ffffff;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for positioning the image */
+  transition: transform 0.3s ease;
+}
+
+.flavors-list li:hover {
+  transform: scale(1.05);
+}
+
+/* Dropdown Image Styling */
+.flavor-image {
+  display: none; /* Hidden by default */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100px;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Show the image when hovering over the list item */
+.flavors-list li:hover .flavor-image {
+  display: block;
+  bottom: -220px; /* Move image slightly below the flavor */
+  opacity: 1;
+}
+
   
